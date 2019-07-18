@@ -6,6 +6,7 @@ public class PlayerAnimator : MonoBehaviour {
 
     public Animator playerAnimator;
 
+
     private bool _isTouched;
 
 	// Use this for initialization
@@ -17,6 +18,19 @@ public class PlayerAnimator : MonoBehaviour {
 	void Update () {
         switch (Globals.worldState) {
             case Globals.state.NORMAL:
+                playerAnimator.SetBool("isFloat", false);
+                if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)) {
+                    playerAnimator.SetBool("isMove", true);
+                    if (_isTouched)
+                        playerAnimator.SetBool("isTouched", true);
+                    else
+                        playerAnimator.SetBool("isTouched", false);
+                }
+                else {
+                    playerAnimator.SetBool("isMove", false);
+                    playerAnimator.SetBool("isTouched", false);
+                }
+                break;
             case Globals.state.INVERT:
                 playerAnimator.SetBool("isFloat", false);
                 if (_isTouched)
