@@ -65,5 +65,6 @@ public class GameManager : MonoBehaviour {
     public void Reload() {
         Globals.worldState = Globals.state.NORMAL;
         Globals.timeStop = false;
+        Globals.gravity = 50;
     }
 }

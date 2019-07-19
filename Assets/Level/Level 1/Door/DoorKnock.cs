@@ -8,6 +8,7 @@ public class DoorKnock : MonoBehaviour {
     public GameObject[] catEyes;//猫眼素材
     public AudioSource switchSound;//切换音效
     public AudioSource miaoSound;//确定场景切换音效，喵叫
+    public GameObject mainCamera;//主镜头
     public float knockTime;//敲门持续时间
 
     private bool _isEnter;//Player是否进入敲门范围
@@ -96,6 +97,7 @@ public class DoorKnock : MonoBehaviour {
                 break;
             case 1:
                 Globals.worldState = Globals.state.INVERT;
+                mainCamera.SendMessage("invert_start");
                 break;
             case 2:
                 Globals.worldState = Globals.state.ZEROGRAVITY;
