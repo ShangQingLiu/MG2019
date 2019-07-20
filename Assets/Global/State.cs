@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class State : MonoBehaviour {
 
-    public enum state{
-        NORMAL,
-        TIMESTOP,
-        INVERT,
-        ZEROGRAVITY
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            Globals.worldState = Globals.state.NORMAL;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            Globals.worldState = Globals.state.INVERT;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3)) {
+            Globals.worldState = Globals.state.ZEROGRAVITY;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4)) {
+            Globals.timeStop = true;
+        }
     }
-    public state timestop = state.TIMESTOP;
-    public state normal = state.NORMAL;
-    public state invert = state.INVERT;
-    public state zerogravity = state.ZEROGRAVITY;
-
-    //public static state worldState = state.NORMAL;
-
 }

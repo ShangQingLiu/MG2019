@@ -7,12 +7,15 @@ public class platerMovement : MonoBehaviour {
     public float speed;
 
     private Rigidbody rigid;
+    private Rigidbody2D _body;
 	// Use this for initialization
 	void Start () {
 
-        rigid = GetComponent<Rigidbody>();
+        //rigid = GetComponent<Rigidbody>();
             Debug.Log(Globals.worldState);
-	}
+        _body = GetComponent<Rigidbody2D>();
+
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -23,21 +26,21 @@ public class platerMovement : MonoBehaviour {
             Vertical = 0.0f;
             
 
-        Vector3 move = new Vector3(Horizontal, Vertical, 0.0f);
+        Vector2 move = new Vector2(Horizontal, Vertical);
 
         //rigid.AddForce(move * speed);
-        if (rigid.velocity.magnitude > 50)
-            rigid.velocity =move.normalized * 50;
+        if (_body.velocity.magnitude > 50)
+            _body.velocity =move.normalized * 50;
         else
-            rigid.velocity += move * speed;
+            _body.velocity += move * speed;
 
-        if (!this.GetComponent<FloatingState>().enabled)
-        {
-            if (Globals.worldState == Globals.state.ZEROGRAVITY)
-            {
-                this.GetComponent<FloatingState>().enabled = true; 
-            }
-        }
+        //if (!this.GetComponent<FloatingState>().enabled)
+        //{
+        //    if (Globals.worldState == Globals.state.ZEROGRAVITY)
+        //    {
+        //        this.GetComponent<FloatingState>().enabled = true; 
+        //    }
+        //}
 
 	}
 }
