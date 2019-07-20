@@ -30,7 +30,7 @@ public class platerMovement : MonoBehaviour {
 
         //rigid.AddForce(move * speed);
         if (_body.velocity.magnitude > 50)
-            _body.velocity =move.normalized * 50;
+            _body.velocity = _body.velocity.normalized * 50;
         else
             _body.velocity += move * speed;
 
