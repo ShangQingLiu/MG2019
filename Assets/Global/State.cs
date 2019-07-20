@@ -15,7 +15,7 @@ public class State : MonoBehaviour {
             Globals.worldState = Globals.state.ZEROGRAVITY;
         }
         if (Input.GetKeyDown(KeyCode.Alpha4)) {
-            Globals.timeStop = true;
+            Globals.timeStop = Globals.timeStop ? false : true;
         }
     }
 }
