@@ -8,10 +8,12 @@ public class PlayerInvert : MonoBehaviour {
     public GameObject invertPosition;
 
     private Vector3 curRotation;
+    private Rigidbody2D _body;
 
 	// Use this for initialization
 	void Start () {
         curRotation = new Vector3(0, 0, 0);
+        _body = GetComponent<Rigidbody2D>();
     }
 	
 	// Update is called once per frame
@@ -35,9 +37,10 @@ public class PlayerInvert : MonoBehaviour {
         else if (Input.GetKeyDown(KeyCode.D))
             curRotation.y = 0;
         curRotation.z = 0;
-        transform.position = new Vector3(transform.position.x,
-            normalPosition.transform.position.y,
-            transform.position.z);
+        //transform.position = new Vector3(transform.position.x,
+        //    normalPosition.transform.position.y,
+        //    transform.position.z);
+        _body.gravityScale = Globals.gravity2D;
         transform.localEulerAngles = curRotation;
     }
 
@@ -47,9 +50,10 @@ public class PlayerInvert : MonoBehaviour {
         else if (Input.GetKeyDown(KeyCode.D))
             curRotation.y = 180;
         curRotation.z = 180;
-        transform.position = new Vector3(transform.position.x,
-            invertPosition.transform.position.y,
-            transform.position.z);
+        //transform.position = new Vector3(transform.position.x,
+        //    invertPosition.transform.position.y,
+        //    transform.position.z);
+        _body.gravityScale = -Globals.gravity2D;
         transform.localEulerAngles = curRotation;
     }
 
@@ -59,6 +63,7 @@ public class PlayerInvert : MonoBehaviour {
         else if (Input.GetKeyDown(KeyCode.D))
             curRotation.y = 0;
         curRotation.z = 0;
+        _body.gravityScale = 0;
         transform.localEulerAngles = curRotation;
     }
 }
