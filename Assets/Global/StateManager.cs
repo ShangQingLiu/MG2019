@@ -14,7 +14,6 @@ public class StateManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Debug.Log("Start");
         _gravity = Globals.gravity;
 	}
 

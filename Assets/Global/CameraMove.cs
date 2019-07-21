@@ -50,8 +50,6 @@ public class CameraMove : MonoBehaviour {
         }
         
         if (!Boundary_y()) {
-            Debug.Log(transform.position.y);
-            Debug.Log(midPosition.transform.position.y);
 
             if (transform.position.y < midPosition.transform.position.y)
                 transform.position += new Vector3(0, moveSpeed, 0);
