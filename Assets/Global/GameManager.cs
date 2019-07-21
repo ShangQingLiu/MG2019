@@ -44,11 +44,13 @@ public class GameManager : MonoBehaviour {
         triggerDoor[index].SendMessage("Close");
     }
 
+    
     private void GetKey(int index) {
         _isKeyGot[index] = true;
         UIManager.instance.SendMessage("GetKey", index);
     }
 
+    //胜利判断
     public bool isMissionAccomplished(int level) {
         switch (level) {
             case 1:
@@ -61,6 +63,7 @@ public class GameManager : MonoBehaviour {
                 return false;
         }
     }
+
 
     public void Reload() {
         Globals.worldState = Globals.state.NORMAL;

@@ -36,6 +36,7 @@ public class DoorKnock : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Debug.Log(_isEnter);
         if (!_isEnter)
             return;
 
@@ -115,7 +116,12 @@ public class DoorKnock : MonoBehaviour {
         }
         _recordNum = _curNum;
     }
-
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag == "Player") {
+            _isEnter = true;
+            _recordNum = _curNum;
+        }
+    }
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "Player") {
             _isEnter = true;
@@ -123,6 +129,13 @@ public class DoorKnock : MonoBehaviour {
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.tag == "Player") {
+            _isEnter = false;
+            _curNum = _recordNum;
+            SetCatEye();
+        }
+    }
     private void OnTriggerExit(Collider other) {
         if (other.tag == "Player") {
             _isEnter = false;
