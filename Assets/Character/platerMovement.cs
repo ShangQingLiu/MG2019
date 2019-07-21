@@ -27,7 +27,6 @@ public class platerMovement : MonoBehaviour {
             
 
         Vector3 move = new Vector3(Horizontal, Vertical,0);
-
         //rigid.AddForce(move * speed);
         if (_body.velocity.magnitude > 50)
             _body.velocity = _body.velocity.normalized * 50;
