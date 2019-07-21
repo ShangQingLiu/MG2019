@@ -6,14 +6,14 @@ public class platerMovement : MonoBehaviour {
 
     public float speed;
 
-    private Rigidbody rigid;
-    private Rigidbody2D _body;
+    private Rigidbody _body;
+    //private Rigidbody2D rigid2d;
 	// Use this for initialization
 	void Start () {
 
         //rigid = GetComponent<Rigidbody>();
             Debug.Log(Globals.worldState);
-        _body = GetComponent<Rigidbody2D>();
+        _body = GetComponent<Rigidbody>();
 
     }
 	
@@ -26,7 +26,7 @@ public class platerMovement : MonoBehaviour {
             Vertical = 0.0f;
             
 
-        Vector2 move = new Vector2(Horizontal, Vertical);
+        Vector3 move = new Vector3(Horizontal, Vertical,0);
 
         //rigid.AddForce(move * speed);
         if (_body.velocity.magnitude > 50)

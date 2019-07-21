@@ -22,10 +22,10 @@ public class StateManager : MonoBehaviour {
         Debug.Log("Change");
         switch (Globals.worldState) {
             case Globals.state.NORMAL:
-                Physics.gravity = new Vector3(0, -_gravity, 0);
+                Physics.gravity = new Vector3(0, _gravity, 0);
                 break;
             case Globals.state.INVERT:
-                Physics.gravity = new Vector3(0, _gravity, 0);
+                Physics.gravity = new Vector3(0,  -_gravity, 0);
                 break;
             case Globals.state.ZEROGRAVITY:
                 Physics.gravity = new Vector3(0, 0, 0);

@@ -14,7 +14,7 @@ public class StoneStateController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        Debug.Log(Globals.worldState);
         if (Globals.timeStop) {
             rb.mass = 50;
             return;
