@@ -36,7 +36,7 @@ public class DoorKnock : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(_isEnter);
+        //Debug.Log(_isEnter);
         if (!_isEnter)
             return;
 
@@ -108,7 +108,7 @@ public class DoorKnock : MonoBehaviour {
         Debug.Log(Globals.worldState);
         if (!Globals.timeStop) {
             StateManager.instance.SendMessage("StateChange");
-            PlotManager.instance.SendMessage("StatePlot");
+            //PlotManager.instance.SendMessage("StatePlot");
         }
 
         if (_recordNum != _curNum) {
@@ -116,6 +116,7 @@ public class DoorKnock : MonoBehaviour {
         }
         _recordNum = _curNum;
     }
+
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Player") {
             _isEnter = true;

@@ -25,8 +25,8 @@ public class GameManager : MonoBehaviour {
             Debug.Log("TimeStop");
             //停止
             //door.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            foreach (GameObject stone in stones)
-                stone.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            //foreach (GameObject stone in stones)
+            //    stone.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             Physics.gravity = new Vector3(0, 0, 0);
             Globals.timeStop = true;
         }

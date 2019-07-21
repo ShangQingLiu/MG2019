@@ -18,10 +18,6 @@ public class MovePlatform : MonoBehaviour
         _next = 1;
     }
 
-    private void Update() {
-
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -31,10 +27,10 @@ public class MovePlatform : MonoBehaviour
 
         if (Globals.timeStop)
             return;
-
         //移动到点位置时，更新下一个移动点位置
-        if (Vector3.Distance(transform.position, movePoints[_next].transform.position) < 1)
+        if (Vector3.Distance(transform.position, movePoints[_next].transform.position) < 10) {
             _next = (_next == movePoints.Length - 1) ? 0 : _next + 1;
+        }
 
         Vector2 direction = Vector3.Normalize(movePoints[_next].transform.position - transform.position);
         _body.MovePosition(_body.position + direction * velocity * Time.fixedDeltaTime);

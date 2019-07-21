@@ -12,6 +12,7 @@ public class Globals : MonoBehaviour {
     }
     public static state worldState = state.NORMAL;
     public static float gravity = 50;
+    public static float gravity2D = 50;
     public static bool timeStop = false;
 
 
