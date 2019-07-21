@@ -24238,6 +24238,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 54319201855167572, guid: fa59d45a4f4d89044865d05849c11a67,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54319201855167572, guid: fa59d45a4f4d89044865d05849c11a67,
+        type: 2}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 65921706050497786, guid: fa59d45a4f4d89044865d05849c11a67,
         type: 2}
       propertyPath: m_Size.z
