@@ -20,14 +20,14 @@ public class TriggerKey : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Player") {
             if (!_isGet)
                 _isEnter = true;
         }
     }
 
-    private void OnTriggerExit(Collider other) {
+    private void OnTriggerExit2D(Collider2D other) {
         if(other.tag == "Player") {
             _isEnter = false;
         }

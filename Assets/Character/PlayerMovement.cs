@@ -20,14 +20,14 @@ public class PlayerMovement : MonoBehaviour
 
         float Horizontal = Input.GetAxis("Horizontal");
         float Vertical = Input.GetAxis("Vertical");
-        Debug.Log(Horizontal);
+        //Debug.Log(Horizontal);
 
         if (Globals.worldState != Globals.state.ZEROGRAVITY)
             Vertical = 0.0f;
 
 
         Vector2 move = new Vector2(Horizontal, Vertical);
-        Debug.Log("move"+ move);
+        //Debug.Log("move"+ move);
         //rigid.AddForce(move * speed);
         if (_body.velocity.magnitude > 50)
             _body.velocity = _body.velocity.normalized * 50;

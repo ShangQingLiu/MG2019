@@ -18,7 +18,7 @@ public class StoneStateController : MonoBehaviour {
             rb.mass = 50;
             return;
         }
-
+        
         switch (Globals.worldState) {
             case Globals.state.NORMAL:
                 rb.mass = 20000;
