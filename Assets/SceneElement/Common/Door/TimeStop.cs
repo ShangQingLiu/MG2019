@@ -16,7 +16,6 @@ public class TimeStop : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.F)) {
             GameManager.instance.SendMessage("TimeStop");
-            //PlotManager.instance.SendMessage("TimeStopPlot");
             timestopSound.Play();
             filter.SetActive(Invert());
         }
@@ -32,8 +31,19 @@ public class TimeStop : MonoBehaviour {
             _isEnter = true;
         }
     }
+    private void OnTriggerEnter(Collider collision) {
+        if (collision.tag == "Player") {
+            _isEnter = true;
+        }
+    }
 
     private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.tag == "Player") {
+            _isEnter = false;
+        }
+    }
+    
+    private void OnTriggerExit(Collider collision) {
         if (collision.tag == "Player") {
             _isEnter = false;
         }
