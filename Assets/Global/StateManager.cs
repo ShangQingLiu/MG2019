@@ -15,6 +15,7 @@ public class StateManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         _gravity = Globals.gravity;
+        Physics.gravity = new Vector3(0, _gravity, 0);
 	}
 
     private void StateChange() {
