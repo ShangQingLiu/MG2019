@@ -488,8 +488,6 @@ Transform:
   m_Children:
   - {fileID: 233535200}
   - {fileID: 281264583}
-  - {fileID: 1833204891}
-  - {fileID: 655816975}
   m_Father: {fileID: 1838299620}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4356,12 +4354,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655816974}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.5600004, y: 8.700001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.07665401, y: 0.73199695, z: 0.67263407, w: 0.07660393}
+  m_LocalPosition: {x: 0.023245648, y: 0.089746974, z: 0.003652066}
+  m_LocalScale: {x: 0.007605313, y: 0.0027963626, z: 0.0048593013}
   m_Children: []
-  m_Father: {fileID: 43830037}
-  m_RootOrder: 3
+  m_Father: {fileID: 1123508119}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &655816976
 ParticleSystemRenderer:
@@ -13861,6 +13859,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1399114625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100012, guid: 3cc28d9b3e61c884e8de26d1353fcb98,
+    type: 3}
+  m_PrefabInstance: {fileID: 1123508118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1437252444
 GameObject:
   m_ObjectHideFlags: 0
@@ -16760,12 +16764,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833204890}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 2.380002, y: -6.12, z: -24.6}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalRotation: {x: -0.70234054, y: 0.7022905, z: -0.106310435, w: 0.0469475}
+  m_LocalPosition: {x: -0.04959738, y: 0.027572406, z: 0.06527764}
+  m_LocalScale: {x: 0.048593014, y: 0.07605316, z: 0.027963622}
   m_Children: []
-  m_Father: {fileID: 43830037}
-  m_RootOrder: 2
+  m_Father: {fileID: 1123508119}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 180, y: 180, z: 90}
 --- !u!199 &1833204892
 ParticleSystemRenderer:
@@ -21569,7 +21573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nozzle: {fileID: 1838299619}
-  waterfall: {fileID: 43830036}
+  waterfall: {fileID: 1399114625}
   zeroWater: {fileID: 1011297319}
   waterSound: {fileID: 409515329}
 --- !u!212 &1838299622
