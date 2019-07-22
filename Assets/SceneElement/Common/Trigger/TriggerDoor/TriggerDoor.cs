@@ -58,11 +58,9 @@ public class TriggerDoor : MonoBehaviour {
 
     private void Open() {
         state = ScaleState.Open;
-        doorSound.Play();
     }
 
     private void Close() {
         state = ScaleState.Close;
-        doorSound.Play();
     }
 }

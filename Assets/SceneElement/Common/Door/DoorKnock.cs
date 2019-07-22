@@ -62,11 +62,9 @@ public class DoorKnock : MonoBehaviour {
             EnsureChange();
         }
         if (_isKnock) {
-            Debug.Log("Knock");
             _timer += Time.deltaTime;
             character.GetComponent<Animator>().SetBool("isKnocked", true);
             if (_timer > knockTime) {
-                Debug.Log("Knock end");
                 character.GetComponent<Animator>().SetBool("isKnocked", false);
                 _timer = 0;
                 _isKnock = false;

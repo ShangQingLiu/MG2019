@@ -16,21 +16,27 @@ public class StoneState : MonoBehaviour
     void Update()
     {
         if (Globals.timeStop) {
-            _body.velocity = new Vector2(0, 0);
+            _body.mass = 50;
             _body.gravityScale = 0;
             return;
         }
 
         switch (Globals.worldState) {
             case Globals.state.NORMAL:
-                _body.gravityScale = Globals.gravity2D;
+                _body.gravityScale = -Globals.gravity2D;
+                _body.mass = 2000;
                 break;
             case Globals.state.INVERT:
-                _body.gravityScale = -Globals.gravity2D;
+                _body.gravityScale = Globals.gravity2D;
+                _body.mass = 2000;
                 break;
             case Globals.state.ZEROGRAVITY:
                 _body.gravityScale = 0;
+                _body.mass = 50;
                 break;
         }
+        //速度停止
+        if(Globals.timeStop)
+            _body.velocity = new Vector2(0, 0);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PullStone : MonoBehaviour
 {
-    public Rigidbody speStone;
+    public Rigidbody2D speStone;
     private Transform stone;
     private void Start()
     {
@@ -18,7 +18,7 @@ public class PullStone : MonoBehaviour
             {
                 Vector3 D = new Vector3(transform.position.x - stone.position.x,transform.position.y - stone.position.y,0.0f);
                 float dist = D.magnitude;
-                Vector3 pullDir = D.normalized;
+                Vector2 pullDir = D.normalized;
                 Debug.Log("D"+D);
                 Debug.Log("dist"+dist);
                 if (dist > 90) stone = null;
@@ -37,9 +37,17 @@ public class PullStone : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+
+        if (collision.transform.tag == "Stone") {
+            stone = collision.transform;
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.name == "Stone 1")
+        if(collision.transform.tag == "Stone")
         {
             stone = collision.transform; 
         }

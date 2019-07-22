@@ -34,9 +34,9 @@ public class WindZone : MonoBehaviour
         }
 
         if (Globals.worldState == Globals.state.NORMAL)
-            _body.gravityScale = 5;
+            _body.gravityScale = -Globals.gravity2D;
         else if (Globals.worldState == Globals.state.INVERT)
-            _body.gravityScale = -5;
+            _body.gravityScale = Globals.gravity2D;
         else
             _body.gravityScale = 0;
 

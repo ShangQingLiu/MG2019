@@ -20,14 +20,29 @@ public class TriggerKey : MonoBehaviour {
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.tag == "Player") {
+            if (!_isGet)
+                _isEnter = true;
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider other) {
         if(other.tag == "Player") {
             if (!_isGet)
                 _isEnter = true;
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other) {
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.tag == "Player") {
+            _isEnter = false;
+        }
+
+    }
+
+    private void OnTriggerExit(Collider other) {
         if(other.tag == "Player") {
             _isEnter = false;
         }
@@ -38,7 +53,7 @@ public class TriggerKey : MonoBehaviour {
         _isGet = true;
         key.SetActive(true);
         GameManager.instance.SendMessage("GetKey", keyNum);
-        PlotManager.instance.SendMessage("GetKey", keyNum);
+        //PlotManager.instance.SendMessage("GetKey", keyNum);
         keySound.Play();
 
         //钥匙动画...

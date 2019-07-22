@@ -12144,7 +12144,7 @@ GameObject:
   - component: {fileID: 1124574486}
   - component: {fileID: 1124574488}
   - component: {fileID: 1124574487}
-  - component: {fileID: 1124574489}
+  - component: {fileID: 1124574490}
   m_Layer: 0
   m_Name: WindChimes
   m_TagString: Untagged
@@ -12227,7 +12227,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1124574489
+--- !u!114 &1124574490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12236,7 +12236,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1124574485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4787bc210de110640885cf7347acfc8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e6c1fa5a612e6a498ed56519fa83303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timestopSound: {fileID: 21210393}
