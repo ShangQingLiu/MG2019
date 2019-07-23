@@ -16,7 +16,7 @@ public class StoneState : MonoBehaviour
     void Update()
     {
         if (Globals.timeStop) {
-            _body.mass = 50;
+            _body.mass = 20;
             _body.gravityScale = 0;
             _body.velocity *= 0.95f;
             return;
@@ -33,7 +33,7 @@ public class StoneState : MonoBehaviour
                 break;
             case Globals.state.ZEROGRAVITY:
                 _body.gravityScale = 0;
-                _body.mass = 50;
+                _body.mass = 20;
                 break;
         }
     }

@@ -103,7 +103,6 @@ public class DoorKnock : MonoBehaviour {
                 break;
         }
         miaoSound.Play();
-        Debug.Log(Globals.worldState);
         if (!Globals.timeStop) {
             StateManager.instance.SendMessage("StateChange");
             //PlotManager.instance.SendMessage("StatePlot");

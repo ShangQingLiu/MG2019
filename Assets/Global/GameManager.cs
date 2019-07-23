@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour {
 
     private void TimeStop() {
         if (!Globals.timeStop) {
-            Debug.Log("TimeStop");
             //停止
             //door.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             //foreach (GameObject stone in stones)
