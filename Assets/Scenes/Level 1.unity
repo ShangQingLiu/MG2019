@@ -3758,7 +3758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a96787ac1dc6147b9684983d9fe40b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 1074704985}
+  door: {fileID: 0}
 --- !u!61 &483922527
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11219,7 +11219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a96787ac1dc6147b9684983d9fe40b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 1563806746}
+  door: {fileID: 0}
 --- !u!61 &968501892
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11968,7 +11968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f35f8cc05506204c9df16bc720a024d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleSpeed: 0.01
+  scaleSpeed: 0
   doorState: 0
 --- !u!4 &1074704987
 Transform:
@@ -13396,7 +13396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a02f062a33029d41a3c05b37fe030d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speStone: {fileID: 510343379}
 --- !u!114 &1327522019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15117,8 +15116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f35f8cc05506204c9df16bc720a024d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaleSpeed: 0.01
-  doorState: 1
+  scaleSpeed: 0
+  doorState: 0
 --- !u!4 &1563806748
 Transform:
   m_ObjectHideFlags: 0
@@ -22137,7 +22136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1931209357
 Transform:
   m_ObjectHideFlags: 0
@@ -22795,7 +22794,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996932950}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c412bd3552baaf241afaaea41f1ae20a, type: 3}
   m_Name: 

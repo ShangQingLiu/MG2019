@@ -2092,7 +2092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: {fileID: 508433688}
   keySound: {fileID: 497666505}
-  keyNum: 3
+  keyNum: 0
 --- !u!61 &408097720
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2441,7 +2441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487498129}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -658, y: -171, z: 0}
+  m_LocalPosition: {x: -754, y: -171, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 20504035}
@@ -5149,7 +5149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043577976}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 55.3, z: 0}
+  m_LocalPosition: {x: -4, y: 55.3, z: 0}
   m_LocalScale: {x: 20, y: 17, z: 1}
   m_Children: []
   m_Father: {fileID: 350997214}
@@ -5578,7 +5578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: {fileID: 956586063}
   keySound: {fileID: 497666505}
-  keyNum: 4
+  keyNum: 1
 --- !u!61 &1161002130
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10912,7 +10912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a02f062a33029d41a3c05b37fe030d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speStone: {fileID: 2049889238}
 --- !u!212 &2107501326
 SpriteRenderer:
   m_ObjectHideFlags: 0
