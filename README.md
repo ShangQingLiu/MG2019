@@ -25,8 +25,13 @@ Hello! 我们是来自杭州、武汉、北京三地高校的天选之猪小队�
 
 # 游戏投票(网易MG2019复赛 至 8/16)
   喜欢我们就动动你的手指，帮我们投上你宝贵的一票噢!
-  - 网页投票(一天可投一票 可重复)
+  - [网页投票](http://game.academy.163.com/activity/miniGame/2019/prizes)(一天可投一票 可重复)
   - 网易游戏学院APP投票(一天可投五票 可重复)
+    
+       [Apple](https://apps.apple.com/cn/app/%E7%BD%91%E6%98%93%E6%B8%B8%E6%88%8F%E5%AD%A6%E9%99%A2/id1448453985)
+       
+       [Android](http://game.academy.163.com)
+       右上角手机端下载 
     
  p.s. 两个投票系统是分开计算的噢
 ，
