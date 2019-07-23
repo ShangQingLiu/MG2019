@@ -17,6 +17,8 @@ public class TriggerDoor2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Globals.timeStop)
+            return;
 
         if(_isEnter && Globals.worldState == doorState) {
             if (transform.localScale.y > 0)
