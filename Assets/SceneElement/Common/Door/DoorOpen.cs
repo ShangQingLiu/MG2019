@@ -32,13 +32,24 @@ public class DoorOpen : MonoBehaviour {
         GameManager.instance.SendMessage("Reload");
         SceneManager.LoadScene(0);
     }
+    private void OnTriggerEnter2D(Collider2D collision) {
 
+        if (collision.tag == "Player") {
+            _isEnter = true;
+        }
+    }
     private void OnTriggerEnter(Collider other) {
         if(other.tag == "Player") {
             _isEnter = true;
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.tag == "Player") {
+            _isEnter = false;
+        }
+
+    }
     private void OnTriggerExit(Collider other) {
         if(other.tag == "Player") {
             _isEnter = false;

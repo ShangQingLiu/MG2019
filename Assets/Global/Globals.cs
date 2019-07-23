@@ -11,8 +11,8 @@ public class Globals : MonoBehaviour {
         ZEROGRAVITY
     }
     public static state worldState = state.NORMAL;
-    public static float gravity = -50;
-    public static float gravity2D = -50;
+    public static float gravity = -20;
+    public static float gravity2D = -20;
     public static bool timeStop = false;
 
 

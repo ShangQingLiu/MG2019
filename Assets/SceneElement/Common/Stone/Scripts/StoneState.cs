@@ -18,6 +18,7 @@ public class StoneState : MonoBehaviour
         if (Globals.timeStop) {
             _body.mass = 50;
             _body.gravityScale = 0;
+            _body.velocity *= 0.4f;
             return;
         }
 
@@ -35,8 +36,5 @@ public class StoneState : MonoBehaviour
                 _body.mass = 50;
                 break;
         }
-        //速度停止
-        if(Globals.timeStop)
-            _body.velocity = new Vector2(0, 0);
     }
 }
