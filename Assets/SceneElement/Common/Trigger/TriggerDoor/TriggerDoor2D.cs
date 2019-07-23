@@ -22,19 +22,19 @@ public class TriggerDoor2D : MonoBehaviour
 
         if(_isEnter && Globals.worldState == doorState) {
             if (transform.localScale.y > 0)
-                transform.localScale -= new Vector3(0, 1.2f * scaleSpeed, 0);
+                transform.localScale -= new Vector3(0, 1.3f * scaleSpeed, 0);
         }
         else {
             if (transform.localScale.y < 1)
-                transform.localScale += new Vector3(0, 0.8f * scaleSpeed, 0);
+                transform.localScale += new Vector3(0, 0.7f * scaleSpeed, 0);
         }
 
         //越界反补
         if (transform.localScale.y < 0) {
-            transform.localScale += new Vector3(0, 1.2f * scaleSpeed, 0);
+            transform.localScale += new Vector3(0, 1.3f * scaleSpeed, 0);
         }
         else if (transform.localScale.y > 1) {
-            transform.localScale -= new Vector3(0, 0.8f * scaleSpeed, 0);
+            transform.localScale -= new Vector3(0, 0.7f * scaleSpeed, 0);
         }
     }
 

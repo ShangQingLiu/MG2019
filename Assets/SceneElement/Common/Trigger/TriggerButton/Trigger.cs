@@ -7,13 +7,13 @@ public class Trigger : MonoBehaviour
 
     public GameObject door;
 
-    private void OnCollisionEnter2D(Collision2D collision) {
+    private void OnCollisionStay2D(Collision2D collision) {
         if (collision.transform.tag == "Player" || collision.transform.tag == "Stone") {
             door.SendMessage("Open");
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    private void OnTriggerStay2D(Collider2D collision) {
         if (collision.transform.tag == "Player" || collision.transform.tag == "Stone") {
             door.SendMessage("Open");
         }
