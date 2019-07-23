@@ -28,7 +28,7 @@ public class PlotManager : MonoBehaviour {
         _curIndex = 0;
         dialog.SetActive(true);
         plots[_curIndex].SetActive(true);
-        _isCGOver = false;
+        _isCGOver = true;
 	}
 	
 	// Update is called once per frame
