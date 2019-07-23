@@ -2523,7 +2523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487498129}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -754, y: -171, z: 0}
+  m_LocalPosition: {x: -781, y: -171, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 20504035}
@@ -5045,7 +5045,7 @@ AreaEffector2D:
     m_Bits: 3222273847
   m_UseGlobalAngle: 0
   m_ForceAngle: 180
-  m_ForceMagnitude: 500
+  m_ForceMagnitude: 600
   m_ForceVariation: 0
   m_ForceTarget: 0
   m_Drag: 0
