@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DoorOpen : MonoBehaviour {
 
+    public AudioSource winnerSound;
     private bool _isEnter;
 
 	// Use this for initialization
@@ -16,8 +17,8 @@ public class DoorOpen : MonoBehaviour {
 	void Update () {
         if (_isEnter) {
             if (Input.GetKeyDown(KeyCode.Return)) {
-                if (GameManager.instance.isMissionAccomplished(1)) {
-                    PlotManager.instance.SendMessage("GameOverPlot");
+                if (GameManager.instance.isMissionAccomplished(SceneManager.GetActiveScene().buildIndex - 1)) {
+                    //PlotManager.instance.SendMessage("GameOverPlot");
                     StartCoroutine("WaitToNextLevel");
                 }
                     
@@ -28,9 +29,11 @@ public class DoorOpen : MonoBehaviour {
 	}
 
     private IEnumerator WaitToNextLevel() {
+        winnerSound.Play();
         yield return new WaitForSeconds(5);
         GameManager.instance.SendMessage("Reload");
-        SceneManager.LoadScene(0);
+        int nextIndex = SceneManager.GetActiveScene().buildIndex == 5 ? 0 : SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(nextIndex);
     }
     private void OnTriggerEnter2D(Collider2D collision) {
 

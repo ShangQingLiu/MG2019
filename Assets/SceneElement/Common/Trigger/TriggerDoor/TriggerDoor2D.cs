@@ -6,6 +6,7 @@ public class TriggerDoor2D : MonoBehaviour
 {
     public float scaleSpeed;
     public Globals.state doorState;//开门需要的状态
+    public AudioSource shimenSound;//石门移动
 
     private bool _isEnter;
     // Start is called before the first frame update

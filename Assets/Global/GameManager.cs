@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour {
             case 2:
                 return (_isKeyGot[2] && _isKeyGot[3]);
             case 3:
-                return (_isKeyGot[4] && _isKeyGot[5]);
+                return (_isKeyGot[4]);
             default:
                 return false;
         }
